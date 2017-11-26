@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>com.github.ArtsiomCh.NestedBracketsColorer</id>
   <name>Nested Brackets Colorer</name>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <vendor email="achapialiou@gmail.com" url="http://github.com/ArtsiomCh/NestedBracketsColorer">Artsiom Chapialiou</vendor>
 
   <description><![CDATA[
@@ -12,7 +12,8 @@
     ]]></description>
 
   <change-notes><![CDATA[
-      Initial release
+      0.0.2 Change colors to less "acidic" <br>
+      0.0.1 Initial release
     ]]>
   </change-notes>
 

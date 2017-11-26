@@ -11,8 +11,8 @@ import java.awt.Font
 
 internal val roundBrackets = arrayOf(
         Color(255, 255, 255),
-        Color(0, 169, 96),
-        Color(33, 150, 243)
+        Color(0x6A8759),
+        Color(0x6897BB)
 )
 
 internal val squareBrackets = arrayOf(
