@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>com.github.ArtsiomCh.NestedBracketsColorer</id>
   <name>Nested Brackets Colorer</name>
-  <version>0.1.0</version>
+  <version>0.2.0</version>
   <vendor email="achapialiou@gmail.com" url="http://github.com/ArtsiomCh/NestedBracketsColorer">Artsiom Chapialiou</vendor>
 
   <description><![CDATA[
@@ -10,9 +10,11 @@
       - <b>Kotlin</b> (built-in <a href="https://plugins.jetbrains.com/plugin/6954-kotlin">Kotlin plugin</a> required)<br>
       - <b>Flex</b> (<a href="https://plugins.jetbrains.com/plugin/6606-grammar-kit">Grammar-Kit plugin</a> required)<br>
       - <b>PHP</b> and <b>JavaScript/TypeScript</b> (tested with built-in PHP and JS plugins at PhpStorm)
+      - <b>Python</b> (tested with PyCharm)
     ]]></description>
 
   <change-notes><![CDATA[
+      0.2.0 Python support added <br>
       0.1.0 PHP and JavaScript/TypeScript support added <br>
       0.0.2 Change colors to less "acidic" <br>
       0.0.1 Initial release
@@ -33,6 +35,7 @@
   <depends optional="true" config-file="jflex-grammar-annotator.xml">org.jetbrains.idea.grammar</depends>
   <depends optional="true" config-file="php-annotator.xml">com.jetbrains.php</depends>
   <depends optional="true" config-file="js-annotator.xml">JavaScript</depends>
+  <depends optional="true" config-file="python-annotator.xml">com.intellij.modules.python</depends>
 
   <actions>
      <!-- Add your actions here -->

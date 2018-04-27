@@ -1,0 +1,6 @@
+<idea-plugin>
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+    <annotator language="Python" implementationClass="com.github.ArtsiomCh.NestedBracketsColorer.PythonNestedBracketsColorer"/>
+  </extensions>
+</idea-plugin>
