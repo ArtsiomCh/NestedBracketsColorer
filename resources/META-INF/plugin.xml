@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>com.github.ArtsiomCh.NestedBracketsColorer</id>
   <name>Nested Brackets Colorer</name>
-  <version>0.2.1</version>
+  <version>0.3.0</version>
   <vendor email="achapialiou@gmail.com" url="http://github.com/ArtsiomCh/NestedBracketsColorer">Artsiom Chapialiou</vendor>
 
   <description><![CDATA[
@@ -10,10 +10,12 @@
       - <b>Kotlin</b> (built-in <a href="https://plugins.jetbrains.com/plugin/6954-kotlin">Kotlin plugin</a> required)<br>
       - <b>Flex</b> (<a href="https://plugins.jetbrains.com/plugin/6606-grammar-kit">Grammar-Kit plugin</a> required)<br>
       - <b>PHP</b> and <b>JavaScript/TypeScript</b> (tested with built-in PHP and JS plugins at PhpStorm)<br>
-      - <b>Python</b> (tested with PyCharm)
+      - <b>Python</b> (tested with PyCharm)<br>
+      - <b>Scala</b> (<a href="https://plugins.jetbrains.com/plugin/1347-scala">Scala plugin</a> required)
     ]]></description>
 
   <change-notes><![CDATA[
+      0.3.0 Scala support added <br>
       0.2.1 Colors (and styles) customisation available at Settings -> Editor -> Color Scheme -> Nested Brackets Colorer <br>
       0.2.0 Python support added <br>
       0.1.0 PHP and JavaScript/TypeScript support added <br>
@@ -37,6 +39,7 @@
   <depends optional="true" config-file="php-annotator.xml">com.jetbrains.php</depends>
   <depends optional="true" config-file="js-annotator.xml">JavaScript</depends>
   <depends optional="true" config-file="python-annotator.xml">com.intellij.modules.python</depends>
+  <depends optional="true" config-file="scala-annotator.xml">org.intellij.scala</depends>
 
   <extensions defaultExtensionNs="com.intellij">
     <colorSettingsPage implementation="com.github.ArtsiomCh.NestedBracketsColorer.NBCColorSettingsPage"/>

@@ -1,6 +1,6 @@
 <idea-plugin>
   <extensions defaultExtensionNs="com.intellij">
     <!-- Add your extensions here -->
-    <annotator language="kotlin" implementationClass="com.github.ArtsiomCh.NestedBracketsColorer.KotlinNestedBracketsColorer"/>
+    <annotator language="kotlin" implementationClass="com.github.ArtsiomCh.NestedBracketsColorer.languages.KotlinNestedBracketsColorer"/>
   </extensions>
 </idea-plugin>
