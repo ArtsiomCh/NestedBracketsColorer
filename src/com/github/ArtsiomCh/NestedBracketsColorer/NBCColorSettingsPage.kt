@@ -58,6 +58,9 @@ class NBCColorSettingsPage : ColorSettingsPage {
         return  "Round () brackets:\n" +
                 "level_1: ( level_2: <r2>(</r2> level_3: <r3>(</r3> level_4: <r4>(</r4>" +
                 "<r4>)</r4><r3>)</r3><r2>)</r2>)\n\n" +
+                "Angled () brackets:\n" +
+                "level_1: < level_2: <r2><</r2> level_3: <r3><</r3> level_4: <r4><</r4>" +
+                "<r4>></r4><r3>></r3><r2>></r2>)\n\n" +
                 "Square [] brackets:\n" +
                 "level_1: [ level_2: <s2>[</s2> level_3: <s3>[</s3> <s3>]</s3><s2>]</s2>]\n"
     }

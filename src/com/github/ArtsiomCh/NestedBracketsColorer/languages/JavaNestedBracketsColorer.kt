@@ -12,6 +12,7 @@ class JavaNestedBracketsColorer : Annotator {
     override fun annotate(element: PsiElement, holder: AnnotationHolder) {
         annotateUtil(element, holder, LPARENTH, RPARENTH, roundBrackets)
         annotateUtil(element, holder, LBRACKET, RBRACKET, squareBrackets)
+        annotateUtil(element, holder, LT, GT, roundBrackets)
     }
 
 }
