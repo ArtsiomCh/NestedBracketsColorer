@@ -13,10 +13,11 @@
     <orderEntry type="module-library" scope="PROVIDED">
       <library>
         <CLASSES>
-          <root url="jar://$APPLICATION_HOME_DIR$/lib/kotlin-runtime.jar!/" />
+          <root url="file://$MODULE_DIR$/PluginDependencies" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/PluginDependencies" recursive="false" />
       </library>
     </orderEntry>
   </component>

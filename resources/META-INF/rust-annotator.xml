@@ -1,0 +1,6 @@
+<idea-plugin>
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+    <annotator language="Rust" implementationClass="com.github.ArtsiomCh.NestedBracketsColorer.languages.RustNestedBracketsColorer"/>
+  </extensions>
+</idea-plugin>
