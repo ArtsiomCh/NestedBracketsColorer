@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>com.github.ArtsiomCh.NestedBracketsColorer</id>
   <name>Nested Brackets Colorer</name>
-  <version>0.4.0</version>
+  <version>0.5.0</version>
   <vendor email="achapialiou@gmail.com" url="http://github.com/ArtsiomCh/NestedBracketsColorer">Artsiom Chapialiou</vendor>
 
   <description><![CDATA[
@@ -12,10 +12,12 @@
       - <b>PHP</b> and <b>JavaScript/TypeScript</b> (tested with built-in PHP and JS plugins at PhpStorm)<br>
       - <b>Python</b> (tested with PyCharm)<br>
       - <b>Scala</b> (<a href="https://plugins.jetbrains.com/plugin/1347-scala">Scala plugin</a> required)<br>
-      - <b>Rust</b> (<a href="https://plugins.jetbrains.com/plugin/8182-rust">Rust plugin</a>)
+      - <b>Rust</b> (<a href="https://plugins.jetbrains.com/plugin/8182-rust">Rust plugin</a>)<br>
+      - <b>Dart</b> (<a href="https://plugins.jetbrains.com/plugin/6351-dart">Dart plugin</a>)
     ]]></description>
 
   <change-notes><![CDATA[
+      0.5.0 Dart support added <br>
       0.4.0 Rust support added <br>
       0.3.1 Angled brackets &lt;&gt; support added for Java/Kotlin <br>
       0.3.0 Scala support added <br>
@@ -44,6 +46,7 @@
   <depends optional="true" config-file="python-annotator.xml">com.intellij.modules.python</depends>
   <depends optional="true" config-file="scala-annotator.xml">org.intellij.scala</depends>
   <depends optional="true" config-file="rust-annotator.xml">org.rust.lang</depends>
+  <depends optional="true" config-file="dart-annotator.xml">Dart</depends>
 
   <extensions defaultExtensionNs="com.intellij">
     <colorSettingsPage implementation="com.github.ArtsiomCh.NestedBracketsColorer.NBCColorSettingsPage"/>
