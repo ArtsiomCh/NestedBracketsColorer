@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>com.github.ArtsiomCh.NestedBracketsColorer</id>
   <name>Nested Brackets Colorer</name>
-  <version>0.5.0</version>
+  <version>0.6.0</version>
   <vendor email="achapialiou@gmail.com" url="http://github.com/ArtsiomCh/NestedBracketsColorer">Artsiom Chapialiou</vendor>
 
   <description><![CDATA[
@@ -17,6 +17,7 @@
     ]]></description>
 
   <change-notes><![CDATA[
+      0.6.0 update highlighting mechanism to follow the latest JB recommendations <br>
       0.5.0 Dart support added <br>
       0.4.0 Rust support added <br>
       0.3.1 Angled brackets &lt;&gt; support added for Java/Kotlin <br>
@@ -30,7 +31,7 @@
   </change-notes>
 
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-  <idea-version since-build="145.0"/>
+  <idea-version since-build="202.0"/>
 
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
        on how to target different products -->
