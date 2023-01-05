@@ -18,19 +18,12 @@ internal val roundBracketLevel3 = TextAttributesKey.createTextAttributesKey(
 internal val roundBracketLevel4 = TextAttributesKey.createTextAttributesKey(
         "round bracket level 4", DefaultLanguageHighlighterColors.DOC_COMMENT_TAG_VALUE)
 
-internal val squareBracketLevel2 = TextAttributesKey.createTextAttributesKey(
-        "square bracket level 2", DefaultLanguageHighlighterColors.INSTANCE_FIELD)
-internal val squareBracketLevel3 = TextAttributesKey.createTextAttributesKey(
-        "square bracket level 3", DefaultLanguageHighlighterColors.INSTANCE_METHOD)
-
 class NBCColorSettingsPage : ColorSettingsPage {
 
     private val DESCRIPTORS = arrayOf(
-        AttributesDescriptor("Round bracket level 2", roundBracketLevel2),
-        AttributesDescriptor("Round bracket level 3", roundBracketLevel3),
-        AttributesDescriptor("Round bracket level 4", roundBracketLevel4),
-            AttributesDescriptor("Square bracket level 2", squareBracketLevel2),
-            AttributesDescriptor("Square bracket level 3", squareBracketLevel3)
+        AttributesDescriptor("Bracket/brace level 2", roundBracketLevel2),
+        AttributesDescriptor("Bracket/brace level 3", roundBracketLevel3),
+        AttributesDescriptor("Bracket/brace level 4", roundBracketLevel4),
     )
 
     override fun getAttributeDescriptors(): Array<AttributesDescriptor> {
@@ -39,13 +32,11 @@ class NBCColorSettingsPage : ColorSettingsPage {
 
     override fun getAdditionalHighlightingTagToDescriptorMap(): MutableMap<String, TextAttributesKey> {
         return ContainerUtil.newHashMap(
-                Arrays.asList("r2", "r3", "r4", "s2", "s3"),
+                Arrays.asList("r2", "r3", "r4"),
                 Arrays.asList(
                         roundBracketLevel2,
                         roundBracketLevel3,
                         roundBracketLevel4,
-                        squareBracketLevel2,
-                        squareBracketLevel3
                 )
         )
     }
@@ -55,14 +46,19 @@ class NBCColorSettingsPage : ColorSettingsPage {
     }
 
     override fun getDemoText(): String {
-        return  "Round () brackets:\n" +
-                "level_1: ( level_2: <r2>(</r2> level_3: <r3>(</r3> level_4: <r4>(</r4>" +
-                "<r4>)</r4><r3>)</r3><r2>)</r2>)\n\n" +
-                "Angled () brackets:\n" +
-                "level_1: < level_2: <r2><</r2> level_3: <r3><</r3> level_4: <r4><</r4>" +
-                "<r4>></r4><r3>></r3><r2>></r2>)\n\n" +
-                "Square [] brackets:\n" +
-                "level_1: [ level_2: <s2>[</s2> level_3: <s3>[</s3> <s3>]</s3><s2>]</s2>]\n"
+        return """
+Round () brackets:
+level_1: ( level_2: <r2>(</r2> level_3: <r3>(</r3> level_4: <r4>(</r4><r4>)</r4><r3>)</r3><r2>)</r2>)
+
+Square [] brackets (in some languages):
+level_1: [ level_2: <r2>[</r2> level_3: <r3>[</r3> level_4: <r4>[</r4><r4>]</r4><r3>]</r3><r2>]</r2>]
+
+Angled <> brackets (in some languages):
+level_1: < level_2: <r2><</r2> level_3: <r3><</r3> level_4: <r4><</r4><r4>></r4><r3>></r3><r2>></r2>>
+
+Braces {} in C# only:
+level_1: { level_2: <r2>{</r2> level_3: <r3>{</r3> level_4: <r4>{</r4><r4>}</r4><r3>}</r3><r2>}</r2>}
+"""
     }
 
     override fun getIcon(): Icon? {

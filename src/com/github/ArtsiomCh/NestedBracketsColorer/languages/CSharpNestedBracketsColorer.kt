@@ -11,12 +11,15 @@ import com.jetbrains.rider.ideaInterop.fileTypes.csharp.kotoparser.lexer.CSharpT
 import com.jetbrains.rider.ideaInterop.fileTypes.csharp.kotoparser.lexer.CSharpTokenType.GT
 import com.jetbrains.rider.ideaInterop.fileTypes.csharp.kotoparser.lexer.CSharpTokenType.LBRACKET
 import com.jetbrains.rider.ideaInterop.fileTypes.csharp.kotoparser.lexer.CSharpTokenType.RBRACKET
+import com.jetbrains.rider.ideaInterop.fileTypes.csharp.kotoparser.lexer.CSharpTokenType.LBRACE
+import com.jetbrains.rider.ideaInterop.fileTypes.csharp.kotoparser.lexer.CSharpTokenType.RBRACE
 
 class CSharpNestedBracketsColorer : Annotator {
     override fun annotate(element: PsiElement, holder: AnnotationHolder) {
-        annotateUtil(element, holder, LPARENTH, RPARENTH, roundBrackets)
-        annotateUtil(element, holder, LT, GT, roundBrackets)
-        annotateUtil(element, holder, LBRACKET, RBRACKET, squareBrackets)
+        annotateUtil(element, holder, LPARENTH, RPARENTH)
+        annotateUtil(element, holder, LT, GT)
+        annotateUtil(element, holder, LBRACKET, RBRACKET)
+        annotateUtil(element, holder, LBRACE, RBRACE)
     }
 
 }

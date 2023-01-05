@@ -1,11 +1,11 @@
 <idea-plugin>
   <id>com.github.ArtsiomCh.NestedBracketsColorer</id>
   <name>Nested Brackets Colorer</name>
-  <version>0.7.0</version>
+  <version>0.7.1</version>
   <vendor email="achapialiou@gmail.com" url="http://github.com/ArtsiomCh/NestedBracketsColorer">Artsiom Chapialiou</vendor>
 
   <description><![CDATA[
-      Coloring nested round (), angled &lt;&gt; and square [] brackets starting from the second level at next languages:<br>
+      Coloring nested round (), *angled &lt;&gt;, *braces {} and *square [] brackets starting from the second level at next languages:<br>
       - <b>Java</b> (built-in Java plugin required)<br>
       - <b>Kotlin</b> (built-in <a href="https://plugins.jetbrains.com/plugin/6954-kotlin">Kotlin plugin</a> required)<br>
       - <b>Flex</b> (<a href="https://plugins.jetbrains.com/plugin/6606-grammar-kit">Grammar-Kit plugin</a> required)<br>
@@ -15,9 +15,12 @@
       - <b>Rust</b> (<a href="https://plugins.jetbrains.com/plugin/8182-rust">Rust plugin</a>)<br>
       - <b>Dart</b> (<a href="https://plugins.jetbrains.com/plugin/6351-dart">Dart plugin</a>)<br>
       - <b>C#</b> (with Rider)<br>
+      <br>
+      * angled &lt;&gt;, braces {} and square [] brackets coloring supported not in all languages.
     ]]></description>
 
   <change-notes><![CDATA[
+      0.7.1 C# support for {} braces added; brackets coloring unification <br>
       0.7.0 C# support added <br>
       0.6.0 update highlighting mechanism to follow the latest JB recommendations <br>
       0.5.0 Dart support added <br>

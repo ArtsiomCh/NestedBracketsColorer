@@ -9,8 +9,8 @@ import org.jetbrains.plugins.scala.lang.lexer.ScalaTokenTypes.*
 
 class ScalaNestedBracketsColorer : Annotator {
     override fun annotate(element: PsiElement, holder: AnnotationHolder) {
-        annotateUtil(element, holder, tLPARENTHESIS, tRPARENTHESIS, roundBrackets)
-        annotateUtil(element, holder, tLSQBRACKET, tRSQBRACKET, squareBrackets)
+        annotateUtil(element, holder, tLPARENTHESIS, tRPARENTHESIS)
+        annotateUtil(element, holder, tLSQBRACKET, tRSQBRACKET)
     }
 
 }

@@ -8,21 +8,15 @@ import com.intellij.psi.PsiFile
 import com.intellij.psi.impl.source.tree.LeafPsiElement
 import com.intellij.psi.tree.IElementType
 
-internal val roundBrackets = arrayOf(
+private val brackets = arrayOf(
     roundBracketLevel4,
     roundBracketLevel2,
     roundBracketLevel3
 )
 
-internal val squareBrackets = arrayOf(
-    squareBracketLevel3,
-    squareBracketLevel2
-)
-
 internal fun annotateUtil(
     element: PsiElement, holder: AnnotationHolder,
-    LEFT: IElementType, RIGHT: IElementType,
-    brackets: Array<TextAttributesKey>
+    LEFT: IElementType, RIGHT: IElementType
 ) {
 
     fun getBracketLevel(element: LeafPsiElement): Int {

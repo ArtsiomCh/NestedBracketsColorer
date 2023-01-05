@@ -9,8 +9,8 @@ import com.jetbrains.php.lang.lexer.PhpTokenTypes.*
 
 class PHPNestedBracketsColorer : Annotator {
     override fun annotate(element: PsiElement, holder: AnnotationHolder) {
-        annotateUtil(element, holder, chLPAREN, chRPAREN, roundBrackets)
-        annotateUtil(element, holder, chLBRACKET, chRBRACKET, squareBrackets)
+        annotateUtil(element, holder, chLPAREN, chRPAREN)
+        annotateUtil(element, holder, chLBRACKET, chRBRACKET)
     }
 
 }

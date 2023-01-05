@@ -8,8 +8,8 @@ import com.jetbrains.lang.dart.DartTokenTypes.*
 
 class DartNestedBracketsColorer : Annotator {
     override fun annotate(element: PsiElement, holder: AnnotationHolder) {
-        annotateUtil(element, holder, LPAREN, RPAREN, roundBrackets)
-        annotateUtil(element, holder, LT, GT, roundBrackets)
+        annotateUtil(element, holder, LPAREN, RPAREN)
+        annotateUtil(element, holder, LT, GT)
     }
 
 }

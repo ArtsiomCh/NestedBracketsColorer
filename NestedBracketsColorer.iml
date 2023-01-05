@@ -19,5 +19,6 @@
         <jarDirectory url="file://$MODULE_DIR$/PluginDependencies" recursive="false" />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
   </component>
 </module>
