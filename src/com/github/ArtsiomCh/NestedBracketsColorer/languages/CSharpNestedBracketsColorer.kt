@@ -1,25 +1,23 @@
 package com.github.ArtsiomCh.NestedBracketsColorer.languages
 
-import com.github.ArtsiomCh.NestedBracketsColorer.*
 import com.intellij.lang.annotation.AnnotationHolder
 import com.intellij.lang.annotation.Annotator
 import com.intellij.psi.PsiElement
 
-import com.jetbrains.rider.ideaInterop.fileTypes.csharp.kotoparser.lexer.CSharpTokenType.LPARENTH
-import com.jetbrains.rider.ideaInterop.fileTypes.csharp.kotoparser.lexer.CSharpTokenType.RPARENTH
-import com.jetbrains.rider.ideaInterop.fileTypes.csharp.kotoparser.lexer.CSharpTokenType.LT
-import com.jetbrains.rider.ideaInterop.fileTypes.csharp.kotoparser.lexer.CSharpTokenType.GT
-import com.jetbrains.rider.ideaInterop.fileTypes.csharp.kotoparser.lexer.CSharpTokenType.LBRACKET
-import com.jetbrains.rider.ideaInterop.fileTypes.csharp.kotoparser.lexer.CSharpTokenType.RBRACKET
-import com.jetbrains.rider.ideaInterop.fileTypes.csharp.kotoparser.lexer.CSharpTokenType.LBRACE
-import com.jetbrains.rider.ideaInterop.fileTypes.csharp.kotoparser.lexer.CSharpTokenType.RBRACE
-
 class CSharpNestedBracketsColorer : Annotator {
+
+    private fun hasClass(className: String): Boolean = try {
+        Class.forName(className)
+        true
+    } catch (e: ClassNotFoundException) {
+        false
+    }
+
+    private val hasCSharp233Support: Boolean =
+        hasClass("com.jetbrains.rider.languages.fileTypes.csharp.kotoparser.lexer.CSharpTokenType")
+
     override fun annotate(element: PsiElement, holder: AnnotationHolder) {
-        annotateUtil(element, holder, LPARENTH, RPARENTH)
-        annotateUtil(element, holder, LT, GT)
-        annotateUtil(element, holder, LBRACKET, RBRACKET)
-        annotateUtil(element, holder, LBRACE, RBRACE)
+        if (hasCSharp233Support) CSharp233.annotate(element, holder) else CSharp232.annotate(element, holder)
     }
 
 }
